@@ -71,7 +71,7 @@ public class ProjectsApp {
 					  listProjects(); // listProjects() should also return boolean (false)
 					break;
 				case 3:
-					selectProject();
+					  selectProject();
 					break;
 /*
 * Add case 4 to the switch statement and call method updateProjectDetails().
@@ -111,20 +111,13 @@ private void deleteProject() {
 		projectService.deleteProject(projectId);
 		System.out.println("\nProject: " + deleteProjectName.getProjectId()+ " - " + deleteProjectName.getProjectName() + " deleted");	
 		
-		
+		//Clear curProject after delete
 	     // Check to see if variable projectId equals projectId
 		 // set curProject to null
-		 //if(projectId == curProject.getProjectId()) 
-		      // curProject = null;
 		   if (curProject != null && projectId.equals(curProject.getProjectId())) {
 		        curProject = null;
 		    }
-		 
-		 
-		 
-		 
-		 
-	         }
+	     }
 
 /*
 * 3a. Check to see if curProject is null. If so, print a message "\nPlease select a project." and return from the method.
@@ -150,10 +143,6 @@ private void deleteProject() {
 				   getIntInput("Enter updated project difficulty (1 - 5). Current difficulty: [" + curProject.getDifficulty() + "]");
 		   String notes = 
 				   getStringInput("Enter updated project notes. Current notes: [" + curProject.getNotes() + "]");
-		   
-		   
-		   
-		 
 		   
 //3c part 1. Create a new Project object.
 //new instance of Class Project from projects.entity.Project
