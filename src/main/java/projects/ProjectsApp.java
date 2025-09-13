@@ -124,7 +124,7 @@ private void deleteProject() {
 */	  private void updateProjectDetails() {
 		   //if statement to check to see if current project is null and print message
 		   if(Objects.isNull(curProject)) {// Can also write: if(curProject == null){}
-			   System.out.println("\nPlease select a project before updating.");
+			   System.out.println("\n***Error*** Please select a project before updating.");
 			   return;// return stops the method when null
 		   }
 		   
@@ -329,3 +329,4 @@ private void deleteProject() {
 	
 
 }
+
