@@ -102,14 +102,14 @@ public class ProjectsApp {
 	}
 
 private void deleteProject() {
-		listProjects();
+ 
+		listProjects();	 //retrieves list of projects
+		
 		Integer projectId = getIntInput("\nPlease enter project to delete");
  
-		
-		
 		Project deleteProjectName = projectService.fetchProjectById(projectId);
 		projectService.deleteProject(projectId);
-		System.out.println("\nProject: " + deleteProjectName.getProjectId()+ " - " + deleteProjectName.getProjectName() + " deleted");	
+		System.out.println("\nProject: " + deleteProjectName.getProjectId()+ " - " + deleteProjectName.getProjectName() + " deleted successfully!5");	
 		
 		//Clear curProject after delete
 	     // Check to see if variable projectId equals projectId
@@ -270,9 +270,6 @@ private void deleteProject() {
 	    System.out.println("Exiting the menu.");
  
 	}
-
-
-
 
 	private int getUserSelection() {
 		
