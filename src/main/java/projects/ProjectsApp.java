@@ -71,6 +71,7 @@ public class ProjectsApp {
 					  listProjects(); // listProjects() should also return boolean (false)
 					break;
 				case 3:
+					selectProject();
 					break;
 /*
 * Add case 4 to the switch statement and call method updateProjectDetails().
