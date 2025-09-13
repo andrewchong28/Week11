@@ -3,6 +3,7 @@ package projects;
 import java.math.BigDecimal;
 
 
+
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
@@ -185,9 +186,10 @@ private void deleteProject() {
 * projectService.fetchProjectById(). Pass the project ID obtained from
 * curProject.
 */
-		   
+		     //runs update method modifyProjectDetails from projectDao
       /*3e*/  projectService.modifyProjectDetails(project);
       
+              //fetches current projectid so curProject has the the newest value
      /*3f*/   curProject = projectService.fetchProjectById(curProject.getProjectId());
       
    	
